@@ -15,70 +15,69 @@ import java.awt.Color;
  * @author davide
  */
 public class RGB {
-    private int R;
-    private int G;
-    private int B;
-    private int RGB;
+    private int r;
+    private int g;
+    private int b;
+    private int rgb;
     
-    public RGB(int R, int G, int B) {
-        setRGB(R, G, B);
-        
-    }
-    
-    public RGB(int RGB){
-        setRGB(RGB);
-    }
-    
-    public final void setR(int R){
-        this.R = R;
+    public RGB(int r, int g, int b) {
+        setRGB(r, g, b);
         updateRGB();
     }
     
-    public final void setG(int G){
-        this.G = G;
-        updateRGB();
-    }
-    
-    public final void setB(int B){
-        this.B = B;
-        updateRGB();
-    }
-    
-    public final void setRGB(int RGB){
-        this.RGB = RGB;
+    public RGB(int rgb){
+        setRGB(rgb);
         updateSingleRGB();
     }
     
-    public final void setRGB(int R, int G, int B){
-        setR(R);
-        setG(G);
-        setB(B);
+    public final void setR(int r){
+        this.r = r;
         updateRGB();
     }
     
+    public final void setG(int g){
+        this.g = g;
+        updateRGB();
+    }
+    
+    public final void setB(int b){
+        this.b = b;
+        updateRGB();
+    }
+    
+    public final void setRGB(int rgb){
+        this.rgb = rgb;
+    }
+    
+    public final void setRGB(int r, int g, int b){
+        setR(r);
+        setG(g);
+        setB(b);
+    }
+    
     public int getR(){
-        return R;
+        return r;
     }
     
     public int getG(){
-        return G;
+        return g;
     }
     
     public int getB(){
-        return B;
+        return b;
     }
     
     public int getRGB(){
-        return RGB;
+        return rgb;
     }
     
     private void updateSingleRGB(){
-        Color c = new Color(RGB);
+        Color c = new Color(rgb);
         setRGB(c.getRed(), c.getGreen(), c.getBlue());
     }
     
     private void updateRGB(){
-        Color c = new Color(R, G, B);
+        Color c = new Color(r, g, b);
         setRGB(c.getRGB());
     }
     

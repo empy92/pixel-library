@@ -8,6 +8,7 @@ package pixel_library.pixel;
 
 
 
+import java.awt.Color;
 import java.util.ArrayList;
 
 /**
@@ -20,15 +21,15 @@ public class Pixel {
     private RGB rgb;
     private final ArrayList<Pixel> neighbors;
 
-    public Pixel(int x, int y, int R, int G, int B) {
+    public Pixel(int x, int y, int r, int g, int b) {
         initXY(x, y);
-        rgb = new RGB(R, G, B);
+        rgb = new RGB(r, g, b);
         neighbors = new ArrayList<>();
     }
     
-    public Pixel(int x, int y, int RGB) {
+    public Pixel(int x, int y, int rgb) {
         initXY(x, y);
-        rgb = new RGB(RGB);
+        this.rgb = new RGB(rgb);
         neighbors = new ArrayList<>();
     }
     

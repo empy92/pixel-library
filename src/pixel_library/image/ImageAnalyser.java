@@ -6,10 +6,12 @@
 
 package pixel_library.image;
 
+import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Iterator;
 import pixel_library.pixel.Pixel;
+import pixel_library.pixel.RGB;
 
 /**
  *
@@ -36,6 +38,26 @@ public class ImageAnalyser {
             }
         }
         return image;
+    }
+    
+    //write here convertBitmapToPixel
+    //write here convertPixelToBitmap
+    
+    public static RGB averageColor(ArrayList<Pixel> pixels){
+        RGB averageColor;
+        Iterator<Pixel> iter = pixels.iterator();
+        int r = 0;
+        int g = 0;
+        int b = 0;
+        while(iter.hasNext()){
+            RGB color = iter.next().getColor();
+            r += color.getR();
+            g += color.getG();
+            b += color.getB();
+        }
+        int n = pixels.size();
+        averageColor = new RGB(r/n, g/n, b/n);
+        return averageColor;
     }
     
 }
