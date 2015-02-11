@@ -1,4 +1,4 @@
-package pixel;
+package pixel_library.pixel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -21,9 +21,14 @@ public class Pixel {
     private final ArrayList<Pixel> neighbors;
 
     public Pixel(int x, int y, int R, int G, int B) {
-        setX(x);
-        setY(y);
-        setRGB(R, G, B);
+        initXY(x, y);
+        rgb = new RGB(R, G, B);
+        neighbors = new ArrayList<>();
+    }
+    
+    public Pixel(int x, int y, int RGB) {
+        initXY(x, y);
+        rgb = new RGB(RGB);
         neighbors = new ArrayList<>();
     }
     
@@ -35,8 +40,9 @@ public class Pixel {
         this.y = y;
     }
     
-    public final void setRGB(int R, int G, int B){
-        rgb = new RGB(R, G, B);
+    private void initXY(int x, int y){
+        setX(x);
+        setY(y);
     }
     
     public int getX(){
@@ -47,7 +53,7 @@ public class Pixel {
         return y;
     }
     
-    public RGB getRGB(){
+    public RGB getColor(){
         return rgb;
     }
     

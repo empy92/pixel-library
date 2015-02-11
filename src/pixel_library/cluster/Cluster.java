@@ -1,4 +1,4 @@
-package cluster;
+package pixel_library.cluster;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -8,7 +8,7 @@ package cluster;
 
 
 
-import pixel.Pixel;
+import pixel_library.pixel.Pixel;
 import java.util.ArrayList;
 import java.util.Iterator;
 
