@@ -8,7 +8,6 @@ package pixel_library.pixel;
 
 
 
-import java.awt.Color;
 import java.util.ArrayList;
 
 /**

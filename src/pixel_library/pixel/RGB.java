@@ -80,5 +80,21 @@ public class RGB {
         Color c = new Color(r, g, b);
         setRGB(c.getRGB());
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        boolean equals = false;
+        if(obj != null){
+            if(getClass() == obj.getClass()) {
+                final RGB other = (RGB) obj;
+                if(this.rgb == other.rgb) {
+                    equals = true;
+                }
+            }
+        }
+        return equals;
+    }
+    
+    //override hashCode
     
 }
